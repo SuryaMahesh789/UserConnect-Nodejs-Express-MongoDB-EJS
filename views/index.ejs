@@ -1,0 +1,51 @@
+<!-- EJs = embedded java script templates -->
+
+<!-- ejs.co to learn more 
+to get started with the ejs -->
+
+<!-- type ! and tab to get the Basic html template -->
+
+
+<!-- include header -->
+<%- include('include/_header')%>
+
+<!-- Main Site -->
+<main id="site-man">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">
+                    New User <i class="fa-solid fa-user"></i>
+                </span>
+            </a>
+        </div>
+
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>@Email</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_show')%>
+                </tbody>
+            </table>
+        </form>
+
+        <!-- using ejs syntax get the data declared in render.js file and display from index.ejs file  -->
+        <!-- <%= users %> -->
+
+    </div>
+ </main>
+
+<!-- Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer')%>

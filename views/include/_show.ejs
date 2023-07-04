@@ -1,0 +1,43 @@
+<!-- <% for(var i = 0; i < users.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= users[i].name %></td>
+        <td><%= users[i].email %></td>
+        <td><%= users[i].gender %></td>
+        <td><%= users[i].status %></td>
+        <td>
+          
+            <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %> -->
+
+
+
+    <% for(var i = 0; i < users.length; i++) { %>
+        <tr>
+            <td><%= i + 1 %></td>
+            <td><%= users[i].name %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].gender %></td>
+            <td><%= users[i].status %></td>
+            <td>
+            <!-- when user clicks the update icon should send that data to the address bar along with the user (user data details) -->
+            <!-- those details are sent as user object collected at render.js file and redirects to the update_user page appropriately  -->
+            
+            <!-- send user_id to parameter to the render to update_user page  -->
+            
+                <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update"  data-id=<%= users[i]._id%>>
+                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                </a>
+                <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+                    <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+                </a>
+            </td>
+        </tr>
+        <% } %>
